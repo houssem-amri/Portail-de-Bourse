@@ -1,0 +1,41 @@
+<!-- Basic Form Inputs card start -->
+<app-card [title]="'ajouter document'">
+    <h4 class="sub-title">ajouter information </h4>
+
+    <form #addDocumentForm='ngForm' (ngSubmit)="addDocument()">
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">type :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  type" [(ngModel)]='document.type'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">datedeli :</label>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" placeholder="  " [(ngModel)]='document.datedeli'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">dateexpi :</label>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" placeholder="  dateexpi" [(ngModel)]='document.dateexpi'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+
+        <div class="form-group row">
+
+            <div class="col-sm-4">
+                <button type="submit" class="btn btn-info"> ajouter contact </button>
+            </div>
+        </div>
+
+
+
+    </form>
+
+</app-card>
+<!-- Basic Form Inputs card end -->

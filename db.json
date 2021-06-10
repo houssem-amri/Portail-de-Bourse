@@ -1,0 +1,155 @@
+{
+  "Authentification": [
+    {
+      "login": "houssem",
+      "password": "123",
+      "role": "user",
+      "user": "1",
+      "id": 1
+    }
+  ],
+  "Client": [
+    {
+      "firstname": "houssem",
+      "Lastname": "amri",
+      "civilstatuts": "ty",
+      "birthday": "1212-12-12",
+      "nationality": "tn",
+      "etranger": "Non etranger",
+      "resident": "Resident",
+      "birthcountry": "rtyui",
+      "birthcity": "tyui",
+      "residcity": "tyui",
+      "gender": "Homme ",
+      "entitytype": "gfhj",
+      "statuts": "ygui",
+      "activitysector": "ftyguh",
+      "chargeduser": "ftyghu",
+      "ugest": "ftyguh",
+      "id": 1
+    }
+  ],
+  "Ordre": [
+    {
+      "Code_isin_opt": "test order 1",
+      "security": "test order 1",
+      "tradingDate": "test order 1",
+      "valueDate": "1212-12-12",
+      "sens": "test order 1",
+      "currency": "test order 1",
+      "status": "test order 1",
+      "quanti": "17",
+      "price": "17",
+      "feeamount": "17",
+      "mntbrt": "17",
+      "MntNet": "17",
+      "Valeur": "1",
+      "client": "1",
+      "test": true,
+      "id": 1
+    },
+    {
+      "Code_isin_opt": "test order 2",
+      "security": "test order 2",
+      "tradingDate": "test order 2",
+      "valueDate": "1414-12-14",
+      "sens": "test order 2",
+      "currency": "test order 2",
+      "status": "test order 2",
+      "quanti": "15",
+      "price": "15",
+      "feeamount": "15",
+      "mntbrt": "15",
+      "MntNet": "15",
+      "Valeur": "1",
+      "client": "1",
+      "test": false,
+      "id": 2
+    }
+  ],
+  "Operation": [
+    {
+      "Code_isin_opt": "test order 1",
+      "security": "test order 1",
+      "tradingDate": "test order 1",
+      "valueDate": "1212-12-12",
+      "sens": "test order 1",
+      "currency": "test order 1",
+      "status": "test order 1",
+      "quanti": "17",
+      "price": "17",
+      "feeamount": "17",
+      "mntbrt": "17",
+      "MntNet": "17",
+      "client": "1",
+      "test": true,
+      "id": 1
+    }
+  ],
+  "Positiontitre": [
+    {
+      "securitynature": "hello",
+      "securitymarket": "hello",
+      "name": "hello",
+      "currency": "hello",
+      "issuer": "hello",
+      "depositary": "hello",
+      "garantor": "hello",
+      "nominalamount": "hello",
+      "id": 1
+    }
+  ],
+  "Cashaccount": [
+    {
+      "number": "123",
+      "owner": "123",
+      "currency": "123",
+      "ugest": "123",
+      "description": "123",
+      "statuts": "false",
+      "metpay": "12323",
+      "opendate": "1232",
+      "closuredate": "1232",
+      "user": "1",
+      "id": 1
+    }
+  ],
+  "Contact": [
+    {
+      "email": "houssem@gmail.com",
+      "tel": "21369874",
+      "fax": "12355899",
+      "mobile": "12555666",
+      "ville": "tun",
+      "Language": "arab",
+      "zipcode": "2000",
+      "isdefault": "yes",
+      "user": "1",
+      "id": 1
+    }
+  ],
+  "Document": [
+    {
+      "type": "CIN",
+      "datedeli": "1212-12-12",
+      "dateexpi": "1212-12-12",
+      "user": "1",
+      "id": 1
+    }
+  ],
+  "Secaccount": [
+    {
+      "number": "123456",
+      "owner": "123456",
+      "managementtype": "123345",
+      "ugest": "4551",
+      "description": "123",
+      "statuts": "true",
+      "chargeduser": "123",
+      "opendate": "123",
+      "closuredate": "1223",
+      "user": "1",
+      "id": 1
+    }
+  ]
+}

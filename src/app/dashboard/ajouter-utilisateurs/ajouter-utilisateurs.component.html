@@ -1,0 +1,150 @@
+<!-- Basic Form Inputs card start -->
+<app-card [title]="'ajouter utilisateur'">
+    <h4 class="sub-title">information de utilisateur </h4>
+
+    <form #addClientForm='ngForm' (ngSubmit)="addClient()">
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">first name :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  first name" [(ngModel)]='client.firstname'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Last name :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  Last name" [(ngModel)]='client.Lastname'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">civil statuts :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  civil statuts" [(ngModel)]='client.civilstatuts'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">birthday :</label>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" placeholder="  birthday" [(ngModel)]='client.birthday'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">nationality :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  nationality" [(ngModel)]='client.nationality'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">etranger :</label>
+            <div class="col-sm-10">
+
+                <select class="form-control" [(ngModel)]='client.etranger' [ngModelOptions]="{standalone:true}">
+                    <option value="etranger">etranger</option>
+                    <option value="Non etranger">Non etranger</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">resident :</label>
+            <div class="col-sm-10">
+                <select class="form-control" [(ngModel)]='client.resident' [ngModelOptions]="{standalone:true}">
+
+                    <option value="Resident">Resident</option>
+                    <option value="Non Resident">Non Resident</option>
+                </select>
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">birth country :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  birth country" [(ngModel)]='client.birthcountry'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">birth city :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  birth city" [(ngModel)]='client.birthcity'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">resid city :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  resid city" [(ngModel)]='client.residcity'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">gender :</label>
+            <div class="col-sm-10">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Homme "
+                        [(ngModel)]='client.gender' [ngModelOptions]="{standalone:true}">
+                    <label class="form-check-label" for="gridRadios1">Homme :</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Femme "
+                        [(ngModel)]='client.gender' [ngModelOptions]="{standalone:true}">
+                    <label class="form-check-label" for="gridRadios2">Femme :</label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">entity type :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  entity type" [(ngModel)]='client.entitytype'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">statuts :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  statuts" [(ngModel)]='client.statuts'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">activity sector :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder=" activity sector "
+                    [(ngModel)]='client.activitysector' [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">charged user :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="charged user" [(ngModel)]='client.chargeduser'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">ugest :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="ugest " [(ngModel)]='client.ugest'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+
+            <div class="col-sm-4">
+                <button type="submit" class="btn btn-info"> ajouter utilisateur </button>
+            </div>
+        </div>
+
+
+    </form>
+
+</app-card>
+<!-- Basic Form Inputs card end -->

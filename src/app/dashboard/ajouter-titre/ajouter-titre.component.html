@@ -1,0 +1,82 @@
+<!-- Basic Form Inputs card start -->
+<app-card [title]="'ajouter cours'">
+    <h4 class="sub-title">information de cours </h4>
+
+    <form #addCoursForm='ngForm' (ngSubmit)="addCours()">
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">securitynature :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  securitynature"
+                    [(ngModel)]='cours.securitynature' [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">securitymarket :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  securitymarket"
+                    [(ngModel)]='cours.securitymarket' [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">name :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  name" [(ngModel)]='cours.name'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">currency :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  currency" [(ngModel)]='cours.currency'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">issuer :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  issuer" [(ngModel)]='cours.issuer'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">depositary :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  depositary" [(ngModel)]='cours.depositary'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">garantor :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  garantor" [(ngModel)]='cours.garantor'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">nominalamount:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  nominalamount" [(ngModel)]='cours.nominalamount'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="form-group row">
+
+            <div class="col-sm-4">
+                <button type="submit" class="btn btn-info"> ajouter valeur </button>
+            </div>
+        </div>
+
+
+    </form>
+
+</app-card>
+<!-- Basic Form Inputs card end -->

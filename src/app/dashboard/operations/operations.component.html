@@ -1,0 +1,33 @@
+<!-- Basic table card start -->
+<app-card [title]="'operation  table'" [classHeader]="true" [blockClass]="'table-border-style'">
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let o of operation'>
+                    <th scope="row">{{o.Code_isin_opt}}</th>
+                    <td>{{o.security}}</td>
+                    <td>{{o.tradingDate}}</td>
+                    <td>{{o.valueDate}}</td>
+                    <td>
+
+                        <button class="btn btn-primary" (click)="openModal(o.id)">Action</button>
+
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</app-card>
+<!-- Basic table card end -->

@@ -1,0 +1,84 @@
+<!-- Basic Form Inputs card start -->
+<app-card [title]="'ajouter contact'">
+    <h4 class="sub-title">ajouter information </h4>
+
+    <form #addContactForm='ngForm' (ngSubmit)="addContact()">
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">email :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  email" [(ngModel)]='contact.email'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">tel :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  tel" [(ngModel)]='contact.tel'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">fax :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  tradingDate" [(ngModel)]='contact.fax'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">mobile :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  mobile" [(ngModel)]='contact.mobile'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">ville :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder=" ville" [(ngModel)]='contact.ville'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Language :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  Language" [(ngModel)]='contact.Language'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">zipcode :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  zipcode" [(ngModel)]='contact.zipcode'
+                    [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+
+
+
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">isdefault :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  isdefault" [(ngModel)]='contact.isdefault'
+                    [ngModelOptions]="{standalone:true}">
+                <!-- true or false -->
+            </div>
+        </div>
+
+        <div class="form-group row">
+
+            <div class="col-sm-4">
+                <button type="submit" class="btn btn-info"> ajouter contact </button>
+            </div>
+        </div>
+
+
+
+    </form>
+
+</app-card>
+<!-- Basic Form Inputs card end -->

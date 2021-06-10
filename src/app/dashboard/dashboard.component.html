@@ -1,0 +1,43 @@
+<!-- Basic table card start -->
+<app-card [title]="'Cours table'" [classHeader]="true" [blockClass]="'table-border-style'">
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>position date</th>
+                    <th>end date</th>
+                    <th>security</th>
+                    <th>statuts</th>
+                    <th>quanti</th>
+                    <th>price Unit Brt</th>
+                    <th>price Unit Net</th>
+                    <th>price brt</th>
+
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let c of cours'>
+
+                    <td>{{c.securitynature}}</td>
+                    <td>{{c.securitymarket}}</td>
+                    <td>{{c.name}}</td>
+                    <td>{{c.currency}}</td>
+                    <td>{{c.issuer}}</td>
+                    <td>{{c.depositary}}</td>
+                    <td>{{c.garantor}}</td>
+                    <td>{{c.nominalamount}}</td>
+
+
+                    <td><button class="btn btn-danger" (click)='delete(c.id)'><i class="icofont icofont-ui-delete"></i>
+                        </button>
+
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</app-card>
+<!-- Basic table card end -->

@@ -1,0 +1,109 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+            role="tab" aria-controls="home" aria-selected="true">Mes positions titres
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+            role="tab" aria-controls="profile" aria-selected="false">A propos
+        </button>
+    </li>
+
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"></div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <app-card [title]="' '">
+            <div class="card mb-3">
+                <div class="card-body">
+
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">number</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            {{Secaccount?.number}}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">owner</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            {{Secaccount?.owner}}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">managementtype</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            {{Secaccount?.managementtype}}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">ugest</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            {{Secaccount?.ugest}}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">description</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            {{Secaccount?.description}}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">statuts</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            {{Secaccount?.statuts}}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">chargeduser</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            {{Secaccount?.chargeduser}}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">opendate</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            {{Secaccount?.opendate}}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">closuredate</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            {{Secaccount?.closuredate}}
+                        </div>
+                    </div>
+                    <hr>
+
+                </div>
+            </div>
+        </app-card>
+    </div>
+
+</div>

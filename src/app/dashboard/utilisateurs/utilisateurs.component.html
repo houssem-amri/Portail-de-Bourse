@@ -1,0 +1,33 @@
+<!-- Basic table card start -->
+<app-card [title]="'utilisateurs table'" [classHeader]="true" [blockClass]="'table-border-style'">
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>civil statuts</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let c of clients'>
+                    <th scope="row">{{c.id}}</th>
+                    <td>{{c.firstname}}</td>
+                    <td>{{c.Lastname}}</td>
+                    <td>{{c.civilstatuts}}</td>
+
+
+                    <td><button class="btn btn-danger" (click)='delete(c.id)'> supprimer client</button></td>
+                    <td><button class="btn btn-info" (click)="goTo(c.id)"><i class="icofont icofont-eye-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</app-card>
+<!-- Basic table card end -->
