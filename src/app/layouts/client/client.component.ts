@@ -2,11 +2,12 @@ import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@an
 import { state, style, transition, animate, trigger, AUTO_STYLE } from '@angular/animations';
 import 'rxjs/add/operator/filter';
 import { MenuClientItems } from '../../shared/menu-items/menu-client-items';
+import { ClientService } from 'src/app/service/client.service';
 
 @Component({
 	selector: 'app-client',
 	templateUrl: './client.component.html',
-	styleUrls: [ './client.component.css' ],
+	styleUrls: ['./client.component.css'],
 	encapsulation: ViewEncapsulation.None,
 	animations: [
 		trigger('slideInOut', [
@@ -55,7 +56,7 @@ import { MenuClientItems } from '../../shared/menu-items/menu-client-items';
 					height: AUTO_STYLE
 				})
 			),
-			transition('no-block <=> yes-block', [ animate('400ms ease-in-out') ])
+			transition('no-block <=> yes-block', [animate('400ms ease-in-out')])
 		])
 	]
 })
@@ -78,15 +79,21 @@ export class ClientComponent implements OnInit {
 	side_menu: ElementRef;
 
 	config: any;
-
-	constructor(public menuItems: MenuClientItems) {
+	id: any
+	client: any
+	constructor(public menuItems: MenuClientItems, private clientService: ClientService) {
 		const scrollHeight = window.screen.height - 150;
 		this.innerHeight = scrollHeight + 'px';
 		this.windowWidth = window.innerWidth;
 		this.setMenuAttributs(this.windowWidth);
 	}
 
-	ngOnInit() {}
+	ngOnInit() {
+		this.id = JSON.parse(localStorage.getItem('connectedUserDorra'))
+		this.clientService.getClientById(this.id).subscribe((client) => {
+			this.client = client
+		})
+	}
 
 	onClickedOutside(e: Event) {
 		if (this.windowWidth < 768 && this.toggleOn && this.verticalNavType !== 'offcanvas') {
@@ -132,7 +139,7 @@ export class ClientComponent implements OnInit {
 		let search_input: string;
 		let search_parent: any;
 		const friendList = document.querySelectorAll('.userlist-box .media-body .chat-header');
-		Array.prototype.forEach.call(friendList, function(elements, index) {
+		Array.prototype.forEach.call(friendList, function (elements, index) {
 			search_input = elements.innerHTML.toLowerCase();
 			search_parent = elements.parentNode.parentNode;
 			if (search_input.indexOf(search) !== -1) {

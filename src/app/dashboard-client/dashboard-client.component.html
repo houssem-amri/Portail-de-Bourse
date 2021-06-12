@@ -5,20 +5,23 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>position date</th>
-                    <th>end date</th>
-                    <th>security</th>
-                    <th>statuts</th>
-                    <th>quanti</th>
-                    <th>price Unit Brt</th>
-                    <th>price Unit Net</th>
-                    <th>price brt</th>
+                    <th>Nature de sécurité</th>
+                    <th>Marque de sécurité</th>
+                    <th>Nom</th>
+                    <th>Devise</th>
+                    <th>Emetteur </th>
+                    <th>Dépositaire centrale</th>
+                    <th>Garant </th>
+                    <th>Montant nominal</th>
+                    <th>Avec un Tax</th>
+                    <th>Evaluation</th>
+                    <th>Date d’émission</th>
 
-                    <th>Action</th>
+                    <th>Achat</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor='let c of cours'>
+                <tr *ngFor='let c of valeur'>
 
                     <td>{{c.securitynature}}</td>
                     <td>{{c.securitymarket}}</td>
@@ -28,6 +31,9 @@
                     <td>{{c.depositary}}</td>
                     <td>{{c.garantor}}</td>
                     <td>{{c.nominalamount}}</td>
+                    <td>{{c.withholdingtax}}</td>
+                    <td>{{c.rated}}</td>
+                    <td>{{c.issuedate}}</td>
 
 
                     <td><button class="btn btn-success" (click)='addValeur(c.id)'><i

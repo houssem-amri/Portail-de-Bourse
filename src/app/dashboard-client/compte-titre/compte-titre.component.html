@@ -12,7 +12,51 @@
 
 </ul>
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"></div>
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date de position</th>
+                        <th>Date de fin</th>
+                        <th>Sécurité</th>
+                        <th> statut</th>
+                        <th>Quantité </th>
+                        <th> Prix unitaire brt</th>
+                        <th>Prix unitaire net </th>
+                        <th> Prix brt</th>
+                        <th> Prix net</th>
+
+
+                        <th>Vente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let p of Positiontitre'>
+
+                        <td>{{p.positiondate}}</td>
+                        <td>{{p.enddate}}</td>
+                        <td>{{p.security}}</td>
+                        <td>{{p.statuts}}</td>
+                        <td>{{p.quanti}}</td>
+                        <td>{{p.priceUnitBrt}}</td>
+                        <td>{{p.priceUnitNet}}</td>
+                        <td>{{p.pribrt}}</td>
+                        <td>{{p.prinet}}</td>
+
+
+
+                        <td><button class="btn btn-success" (click)='addValeur(p.id)'><i
+                                    class="icofont icofont-shopping-cart"></i>
+                            </button>
+
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
         <app-card [title]="' '">
             <div class="card mb-3">
@@ -27,15 +71,7 @@
                             {{Secaccount?.number}}
                         </div>
                     </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">owner</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{Secaccount?.owner}}
-                        </div>
-                    </div>
+
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">

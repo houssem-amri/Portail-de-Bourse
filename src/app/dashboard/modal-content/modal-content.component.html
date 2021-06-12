@@ -1,5 +1,7 @@
 <div class="modal-header ">
-    <h4 class="modal-title" id="modal-basic-title">Ajouter Operation</h4>
+    <h4 class="modal-title" id="modal-basic-title">Ajouter Operation pour {{client?.firstname}} {{client?.Lastname}}
+    </h4>
+
     <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -11,31 +13,31 @@
     <form [formGroup]='OperationForm'>
 
         <div class="form-group row">
-            <label class="col-sm-4 col-form-label">Code_isin_opt :</label>
+            <label class="col-sm-4 col-form-label">Code ISIN :</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" placeholder="  Code_isin_opt" disabled
+                <input type="text" class="form-control" placeholder="  Code ISIN" disabled
                     formControlName='Code_isin_opt' [(ngModel)]='ordre.Code_isin_opt'>
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-4 col-form-label">security :</label>
+            <label class="col-sm-4 col-form-label">Sécurité :</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" placeholder="  security" disabled [(ngModel)]='ordre.security'
+                <input type="text" class="form-control" placeholder="  Sécurité" disabled [(ngModel)]='ordre.security'
                     formControlName='security'>
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-4 col-form-label">tradingDate :</label>
+            <label class="col-sm-4 col-form-label">Date de négociation :</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" placeholder="  tradingDate" disabled
+                <input type="text" class="form-control" placeholder="  Date de négociation" disabled
                     formControlName='tradingDate' [(ngModel)]='ordre.tradingDate'>
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-4 col-form-label">valueDate :</label>
+            <label class="col-sm-4 col-form-label">Date de valeur :</label>
             <div class="col-sm-8">
-                <input type="date" class="form-control" placeholder="  valueDate" disabled [(ngModel)]='ordre.valueDate'
-                    formControlName='valueDate'>
+                <input type="date" class="form-control" placeholder="  Date de valeur" disabled
+                    [(ngModel)]='ordre.valueDate' formControlName='valueDate'>
             </div>
         </div>
         <div class="form-group row">
@@ -48,23 +50,23 @@
 
 
         <div class="form-group row">
-            <label class="col-sm-4 col-form-label">currency :</label>
+            <label class="col-sm-4 col-form-label">Devise :</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" placeholder=" currency" disabled [(ngModel)]='ordre.currency'
+                <input type="text" class="form-control" placeholder=" Devise" disabled [(ngModel)]='ordre.currency'
                     formControlName='currency'>
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-4 col-form-label">status :</label>
+            <label class="col-sm-4 col-form-label">statut :</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" placeholder="  status" disabled [(ngModel)]='ordre.status'
+                <input type="text" class="form-control" placeholder="  statut" disabled [(ngModel)]='ordre.status'
                     formControlName='status'>
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-4 col-form-label">quanti :</label>
+            <label class="col-sm-4 col-form-label">Quantité :</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" placeholder="  quanti" [(ngModel)]='ordre.quanti'
+                <input type="text" class="form-control" placeholder="  Quantité" [(ngModel)]='ordre.quanti'
                     formControlName='quanti'>
             </div>
         </div>
@@ -73,31 +75,31 @@
 
 
         <div class="form-group row">
-            <label class="col-sm-4 col-form-label">price :</label>
+            <label class="col-sm-4 col-form-label">Prix :</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" placeholder="  price" [(ngModel)]='ordre.price'
+                <input type="text" class="form-control" placeholder="  Prix" [(ngModel)]='ordre.price'
                     formControlName='price'>
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-4 col-form-label">feeamount :</label>
+            <label class="col-sm-4 col-form-label">Montant des frais :</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" placeholder="  feeamount" [(ngModel)]='ordre.feeamount'
+                <input type="text" class="form-control" placeholder="  Montant des frais" [(ngModel)]='ordre.feeamount'
                     formControlName='feeamount'>
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-4 col-form-label">mntbrt :</label>
+            <label class="col-sm-4 col-form-label">Montant brt :</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" placeholder=" mntbrt " [(ngModel)]='ordre.mntbrt'
+                <input type="text" class="form-control" placeholder=" Montant brt " disabled [(ngModel)]='ordre.mntbrt'
                     formControlName='mntbrt'>
             </div>
         </div>
 
         <div class="form-group row">
-            <label class="col-sm-4 col-form-label">MntNet :</label>
+            <label class="col-sm-4 col-form-label">Montant net :</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" placeholder="MntNet" [(ngModel)]='ordre.MntNet'
+                <input type="text" class="form-control" placeholder="Montant net" disabled [(ngModel)]='ordre.MntNet'
                     formControlName='MntNet'>
             </div>
         </div>
@@ -106,7 +108,7 @@
 
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" (click)="passBack()">Close</button>
+                <button type="button" class="btn btn-secondary" (click)="passBack()">Fermé</button>
                 <button type="submit" class="btn btn-primary" (click)="addOperation(OperationForm.value)">ajouter
                     Operation</button>
             </div>

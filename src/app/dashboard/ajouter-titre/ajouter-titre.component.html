@@ -5,60 +5,84 @@
     <form #addCoursForm='ngForm' (ngSubmit)="addCours()">
 
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">securitynature :</label>
+            <label class="col-sm-2 col-form-label">Nature de sécurité :</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="  securitynature"
+                <input type="text" class="form-control" placeholder="  Nature de sécurité"
                     [(ngModel)]='cours.securitynature' [ngModelOptions]="{standalone:true}">
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">securitymarket :</label>
+            <label class="col-sm-2 col-form-label">Marque de sécurité :</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="  securitymarket"
+                <input type="text" class="form-control" placeholder="  Marque de sécurité"
                     [(ngModel)]='cours.securitymarket' [ngModelOptions]="{standalone:true}">
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">name :</label>
+            <label class="col-sm-2 col-form-label">Nom :</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="  name" [(ngModel)]='cours.name'
+                <input type="text" class="form-control" placeholder="  Nom" [(ngModel)]='cours.name'
                     [ngModelOptions]="{standalone:true}">
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">currency :</label>
+            <label class="col-sm-2 col-form-label">Devise :</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="  currency" [(ngModel)]='cours.currency'
+                <input type="text" class="form-control" placeholder="  Devise" [(ngModel)]='cours.currency'
                     [ngModelOptions]="{standalone:true}">
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">issuer :</label>
+            <label class="col-sm-2 col-form-label">Emetteur :</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="  issuer" [(ngModel)]='cours.issuer'
+                <input type="text" class="form-control" placeholder="  Emetteur " [(ngModel)]='cours.issuer'
                     [ngModelOptions]="{standalone:true}">
             </div>
         </div>
 
 
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">depositary :</label>
+            <label class="col-sm-2 col-form-label">Dépositaire centrale :</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="  depositary" [(ngModel)]='cours.depositary'
+                <input type="text" class="form-control" placeholder="  Dépositaire centrale"
+                    [(ngModel)]='cours.depositary' [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Garant :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  Garant " [(ngModel)]='cours.garantor'
                     [ngModelOptions]="{standalone:true}">
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">garantor :</label>
+            <label class="col-sm-2 col-form-label">Montant nominal:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="  garantor" [(ngModel)]='cours.garantor'
+                <input type="text" class="form-control" placeholder="  Montant nominal"
+                    [(ngModel)]='cours.nominalamount' [ngModelOptions]="{standalone:true}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Avec un Tax:</label>
+            <div class="col-sm-10">
+
+                <select class="form-control" [(ngModel)]='cours.withholdingtax' [ngModelOptions]="{standalone:true}">
+                    <option value="true">Oui</option>
+                    <option value="false"> Non</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Evaluation:</label>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" placeholder="  Evaluation" [(ngModel)]='cours.rated'
                     [ngModelOptions]="{standalone:true}">
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">nominalamount:</label>
+            <label class="col-sm-2 col-form-label">Date d’émission:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="  nominalamount" [(ngModel)]='cours.nominalamount'
+                <input type="date" class="form-control" placeholder="  Date d’émission" [(ngModel)]='cours.issuedate'
                     [ngModelOptions]="{standalone:true}">
             </div>
         </div>

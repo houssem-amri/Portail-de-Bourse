@@ -7,7 +7,7 @@ import { Cashaccount } from './../../models/Cashaccount';
 @Component({
 	selector: 'app-ajouter-cashaccount',
 	templateUrl: './ajouter-cashaccount.component.html',
-	styleUrls: [ './ajouter-cashaccount.component.css' ]
+	styleUrls: ['./ajouter-cashaccount.component.css']
 })
 export class AjouterCashaccountComponent implements OnInit {
 	addCashaccountForm: FormGroup;
@@ -27,22 +27,23 @@ export class AjouterCashaccountComponent implements OnInit {
 		console.log('here id client', this.id);
 
 		this.addCashaccountForm = this.formBuilder.group({
-			number: [ '' ],
-			owner: [ '' ],
-			currency: [ '' ],
-			ugest: [ '' ],
-			description: [ '' ],
-			statuts: [ '' ],
-			metpay: [ '' ],
-			opendate: [ '' ],
-			closuredate: [ '' ]
+			solde: [''],
+			number: [''],
+
+			currency: [''],
+			ugest: [''],
+			description: [''],
+			statuts: [''],
+			metpay: [''],
+			opendate: [''],
+			closuredate: ['']
 		});
 	}
 	addCashaccount() {
 		this.Cashaccount.user = this.id;
 		this.CashaccountService.addCashaccount(this.Cashaccount).subscribe((data) => {
 			console.log('here Cashaccount added ', data);
-			this.router.navigate([ `ajouter-secaccount/${this.id}` ]);
+			this.router.navigate([`ajouter-secaccount/${this.id}`]);
 		});
 	}
 }

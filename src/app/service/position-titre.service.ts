@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { valeur } from 'src/app/models/valeur';
+import { Positiontitre } from 'src/app/models/positionTitre';
 
 @Injectable({
 	providedIn: 'root'
@@ -14,15 +14,18 @@ export class PositionTitreService {
 		this.positionTitreUrl = 'http://localhost:3000/Positiontitre';
 	}
 	addPositionTitre(positionTitre) {
-		return this.httpClient.post<valeur>(this.positionTitreUrl, positionTitre, { headers: this.headers });
+		return this.httpClient.post<Positiontitre>(this.positionTitreUrl, positionTitre, { headers: this.headers });
 	}
 	getAllPositiontitre() {
-		return this.httpClient.get<valeur[]>(this.positionTitreUrl, { headers: this.headers });
+		return this.httpClient.get<Positiontitre[]>(this.positionTitreUrl, { headers: this.headers });
 	}
 	getPositiontitreById(id: any) {
-		return this.httpClient.get<valeur>(`${this.positionTitreUrl}/${id}`, { headers: this.headers });
+		return this.httpClient.get<Positiontitre>(`${this.positionTitreUrl}/${id}`, { headers: this.headers });
 	}
 	deletePositiontitre(id: any) {
-		return this.httpClient.delete<valeur>(`${this.positionTitreUrl}/${id}`, { headers: this.headers });
+		return this.httpClient.delete<Positiontitre>(`${this.positionTitreUrl}/${id}`, { headers: this.headers });
+	}
+	getPositiontitreBySecaccountId(secaccountId) {
+		return this.httpClient.get<Positiontitre>(`${this.positionTitreUrl}/?secaccount=${secaccountId}`);
 	}
 }

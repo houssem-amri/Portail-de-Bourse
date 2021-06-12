@@ -5,10 +5,18 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
+                    <th>Code ISIN</th>
+                    <th>Sécurité</th>
+                    <th>Date de négociation</th>
+                    <th>Date de valeur</th>
+                    <th>Sens</th>
+                    <th>Devise</th>
+                    <th>Statut </th>
+                    <th>Quantité</th>
+                    <th>Prix</th>
+                    <th>Montant des frais</th>
+                    <th>Montant brt</th>
+                    <th>Montant net</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -18,9 +26,18 @@
                     <td>{{o.security}}</td>
                     <td>{{o.tradingDate}}</td>
                     <td>{{o.valueDate}}</td>
+                    <td>{{o.sens}}</td>
+                    <td>{{o.currency}}</td>
+                    <td>{{o.status}}</td>
+                    <td>{{o.quanti}}</td>
+                    <td>{{o.price}}</td>
+                    <td>{{o.feeamount}}</td>
+                    <td>{{o.mntbrt}}</td>
+                    <td>{{o.MntNet}}</td>
                     <td>
 
-                        <button class="btn btn-primary">Action</button>
+                        <button class="btn btn-danger" (click)="delete(o.id)"><i
+                                class="icofont icofont-ui-delete"></i></button>
 
                     </td>
                 </tr>

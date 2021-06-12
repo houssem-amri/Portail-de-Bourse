@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { valeur } from '../models/valeur';
-import { PositionTitreService } from '../service/position-titre.service';
+import { ValeurService } from '../service/valeur.service';
 @Component({
 	selector: 'app-dashboard-client',
 	templateUrl: './dashboard-client.component.html',
 	styleUrls: [ './dashboard-client.component.css' ]
 })
 export class DashboardClientComponent implements OnInit {
-	cours: valeur[];
-	constructor(private positionTitreService: PositionTitreService, private router: Router) {}
+	valeur: valeur[];
+	constructor(private valeurService: ValeurService, private router: Router) {}
 
 	ngOnInit() {
 		this.getAllPositiontitre();
 	}
 	getAllPositiontitre() {
-		this.positionTitreService.getAllPositiontitre().subscribe((res) => {
-			console.log('here get all client ', res);
-			this.cours = res;
+		this.valeurService.getAllValeur().subscribe((res) => {
+			console.log('here get all valeur ', res);
+			this.valeur = res;
 		});
 	}
 	addValeur(id) {

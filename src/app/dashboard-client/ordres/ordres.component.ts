@@ -21,4 +21,10 @@ export class OrdresComponent implements OnInit {
 			console.log('here order by id client', this.ordres);
 		});
 	}
+	delete(id){
+		this.ordresService.deleteOrdre(id).subscribe((rep)=>{
+			console.log('order deleted succ' ,rep);
+			this.getAllOrdresByIdClient();
+		})
+	}
 }

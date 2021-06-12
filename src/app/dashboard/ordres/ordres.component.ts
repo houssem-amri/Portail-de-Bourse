@@ -1,22 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { OrdreService } from 'src/app/service/ordre.service';
 import { Ordre } from './../../models/ordre';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalContentComponent } from '../modal-content/modal-content.component';
+import { ClientService } from 'src/app/service/client.service';
 
 @Component({
 	selector: 'app-ordres',
 	templateUrl: './ordres.component.html',
-	styleUrls: [ './ordres.component.css' ]
+	styleUrls: ['./ordres.component.css']
 })
 export class OrdresComponent implements OnInit {
 	ordres: Ordre[];
 
+
 	ordre: any;
 
-	constructor(private ordreService: OrdreService, public modalService: NgbModal) {}
+	constructor(private ordreService: OrdreService, public modalService: NgbModal) { }
 
 	ngOnInit() {
 		this.getAllOrdres();
@@ -24,7 +25,10 @@ export class OrdresComponent implements OnInit {
 	getAllOrdres() {
 		this.ordreService.getAllOrdre().subscribe((data) => {
 			this.ordres = data;
+
 			console.log('here ordres ', this.ordres);
+
+
 		});
 	}
 

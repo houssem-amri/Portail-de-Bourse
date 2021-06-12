@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { PositionTitreService } from 'src/app/service/position-titre.service';
+import { Router } from '@angular/router';
+import { ValeurService } from 'src/app/service/valeur.service';
 import { valeur } from '../../models/valeur';
 
 @Component({
@@ -12,7 +13,7 @@ export class AjouterTitreComponent implements OnInit {
 	addCoursForm: FormGroup;
 
 	cours: valeur;
-	constructor(private formBuilder: FormBuilder, private positionTitreService: PositionTitreService) {
+	constructor(private formBuilder: FormBuilder, private valeurService: ValeurService , private router:Router) {
 		this.cours = new valeur();
 	}
 
@@ -25,12 +26,16 @@ export class AjouterTitreComponent implements OnInit {
 			issuer: [ '' ],
 			depositary: [ '' ],
 			garantor: [ '' ],
-			nominalamount: [ '' ]
+			nominalamount: [ '' ],
+			withholdingtax: [ '' ],
+	        rated: [ '' ],
+	        issuedate: [ '' ]
 		});
 	}
 	addCours() {
-		this.positionTitreService.addPositionTitre(this.cours).subscribe((data) => {
-			console.log('here add client', data);
+		this.valeurService.addValeur(this.cours).subscribe((data) => {
+			console.log('here add valeyr', data);
 		});
+		this.router.navigate(['dashboard'])
 	}
 }

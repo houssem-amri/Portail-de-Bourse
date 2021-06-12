@@ -7,7 +7,7 @@ import { Secaccount } from './../../models/Secaccount';
 @Component({
 	selector: 'app-secaccount',
 	templateUrl: './secaccount.component.html',
-	styleUrls: [ './secaccount.component.css' ]
+	styleUrls: ['./secaccount.component.css']
 })
 export class SecaccountComponent implements OnInit {
 	addSecaccountForm: FormGroup;
@@ -27,22 +27,21 @@ export class SecaccountComponent implements OnInit {
 		console.log('here id client', this.id);
 
 		this.addSecaccountForm = this.formBuilder.group({
-			number: [ '' ],
-			owner: [ '' ],
-			managementtype: [ '' ],
-			ugest: [ '' ],
-			description: [ '' ],
-			statuts: [ '' ],
-			chargeduser: [ '' ],
-			opendate: [ '' ],
-			closuredate: [ '' ]
+			number: [''],
+			managementtype: [''],
+			ugest: [''],
+			description: [''],
+			statuts: [''],
+			chargeduser: [''],
+			opendate: [''],
+			closuredate: ['']
 		});
 	}
 	addSecaccount() {
 		this.Secaccount.user = this.id;
 		this.SecaccountService.addSecaccount(this.Secaccount).subscribe((data) => {
 			console.log('here Secaccount added ', data);
-			this.router.navigate([ 'utilisateurs' ]);
+			this.router.navigate(['utilisateurs']);
 		});
 	}
 }

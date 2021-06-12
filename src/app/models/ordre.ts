@@ -7,12 +7,15 @@ export class Ordre {
 	sens: string;
 	currency: string;
 	status: string;
-	quanti: string;
-	price: string;
-	feeamount: string;
-	mntbrt: string;
-	MntNet: string;
+	quanti: number;
+	price: number;
+	feeamount: number;
+	mntbrt: number;
+	MntNet: number;
 	client: string;
 	test: boolean;
 	Valeur: string;
+	etat: string;
+	cashaccount: string;
+	secaccount: string;
 }

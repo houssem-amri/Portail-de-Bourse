@@ -8,4 +8,7 @@ export class valeur {
 	depositary: string;
 	garantor: string;
 	nominalamount: string;
+	withholdingtax:boolean;
+	rated:string;
+	issuedate:string;
 }

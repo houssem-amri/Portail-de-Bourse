@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { valeur } from '../models/valeur';
-import { PositionTitreService } from '../service/position-titre.service';
+import { ValeurService } from '../service/valeur.service';
 @Component({
 	selector: 'app-dashboard',
 	templateUrl: './dashboard.component.html',
@@ -8,16 +8,16 @@ import { PositionTitreService } from '../service/position-titre.service';
 	encapsulation: ViewEncapsulation.None
 })
 export class DashboardComponent implements OnInit {
-	cours: valeur[];
-	constructor(private positionTitreService: PositionTitreService) {}
+	valeur: valeur[];
+	constructor(private valeurService: ValeurService) {}
 
 	ngOnInit() {
 		this.getAllPositiontitre();
 	}
 	getAllPositiontitre() {
-		this.positionTitreService.getAllPositiontitre().subscribe((res) => {
-			console.log('here get all client ', res);
-			this.cours = res;
+		this.valeurService.getAllValeur().subscribe((res) => {
+			console.log('here get all valeur ', res);
+			this.valeur = res;
 		});
 	}
 }

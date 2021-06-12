@@ -1,7 +1,8 @@
 export class Cashaccount {
 	id: string;
+	solde: number;
 	number: string;
-	owner: string;
+
 	currency: string;
 	ugest: string;
 	description: string;

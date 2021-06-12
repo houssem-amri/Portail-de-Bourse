@@ -25,7 +25,7 @@ export class OperationService {
 	deleteOperation(id: any) {
 		return this.httpClient.delete<Operation>(`${this.operationUrl}/${id}`, { headers: this.headers });
 	}
-	getCashaccountByUserId(userId) {
+	getOperationByUserId(userId) {
 		return this.httpClient.get<Operation>(`${this.operationUrl}?client=${userId}`);
 	}
 }

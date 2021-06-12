@@ -16,4 +16,5 @@ export class Client {
 	activitysector: string;
 	chargeduser: string;
 	ugest: string;
+
 }
