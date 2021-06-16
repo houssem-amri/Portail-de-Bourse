@@ -7,14 +7,14 @@ const routes: Routes = [
 		path: '',
 		component: OrdresComponent,
 		data: {
-			breadcrumb: 'Orders',
+			breadcrumb: "Orders d'achat",
 			status: true
 		}
 	}
 ];
 
 @NgModule({
-	imports: [ RouterModule.forChild(routes) ],
-	exports: [ RouterModule ]
+	imports: [RouterModule.forChild(routes)],
+	exports: [RouterModule]
 })
-export class OrdresRoutingModule {}
+export class OrdresRoutingModule { }

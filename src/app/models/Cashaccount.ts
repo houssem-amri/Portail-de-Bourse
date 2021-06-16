@@ -1,6 +1,6 @@
 export class Cashaccount {
 	id: string;
-	solde: number;
+	solde: Number;
 	number: string;
 
 	currency: string;

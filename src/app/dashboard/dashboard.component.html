@@ -5,6 +5,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th>Code ISIN </th>
                     <th>Nature de sécurité</th>
                     <th>Marque de sécurité</th>
                     <th>Nom</th>
@@ -25,6 +26,7 @@
             <tbody>
                 <tr *ngFor='let c of valeur'>
 
+                    <td>{{c.Code_isin_opt}}</td>
                     <td>{{c.securitynature}}</td>
                     <td>{{c.securitymarket}}</td>
                     <td>{{c.name}}</td>

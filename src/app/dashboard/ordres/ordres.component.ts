@@ -23,7 +23,7 @@ export class OrdresComponent implements OnInit {
 		this.getAllOrdres();
 	}
 	getAllOrdres() {
-		this.ordreService.getAllOrdre().subscribe((data) => {
+		this.ordreService.getAllOrdreAchat().subscribe((data) => {
 			this.ordres = data;
 
 			console.log('here ordres ', this.ordres);
@@ -46,5 +46,11 @@ export class OrdresComponent implements OnInit {
 		// modalRef.componentInstance.passEntry.subscribe((receivedEntry) => {
 		//   console.log(receivedEntry);
 		// })
+	}
+	delete(id) {
+		this.ordreService.deleteOrdre(id).subscribe((del) => {
+			console.log('ordre deleted ', del);
+			this.getAllOrdres();
+		})
 	}
 }

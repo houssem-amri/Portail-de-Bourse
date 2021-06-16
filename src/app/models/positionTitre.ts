@@ -10,4 +10,5 @@ export class Positiontitre {
     prinet: number;
     Valeur: string;
     secaccount: string;
+    Operation: string;
 }

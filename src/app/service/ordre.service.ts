@@ -16,8 +16,11 @@ export class OrdreService {
 	addOrdre(ordre) {
 		return this.httpClient.post<Ordre[]>(this.ordreUrl, ordre, { headers: this.headers });
 	}
-	getAllOrdre() {
-		return this.httpClient.get<Ordre[]>(`${this.ordreUrl}/?test=false`, { headers: this.headers });
+	getAllOrdreAchat() {
+		return this.httpClient.get<Ordre[]>(`${this.ordreUrl}/?test=false&etat=achat`, { headers: this.headers });
+	}
+	getAllOrdreVente() {
+		return this.httpClient.get<Ordre[]>(`${this.ordreUrl}/?test=false&etat=vente`, { headers: this.headers });
 	}
 	getAllHistoryOrdre() {
 		return this.httpClient.get<Ordre[]>(`${this.ordreUrl}/?test=true`, { headers: this.headers });

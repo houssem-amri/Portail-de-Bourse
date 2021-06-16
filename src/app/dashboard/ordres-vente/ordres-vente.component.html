@@ -1,28 +1,29 @@
 <!-- Basic table card start -->
-<app-card [title]="'operation  table'" [classHeader]="true" [blockClass]="'table-border-style'">
+<app-card [title]="'orders table'" [classHeader]="true" [blockClass]="'table-border-style'">
 
     <div class="table-responsive">
         <table class="table">
             <thead>
                 <tr>
+
                     <th>Code ISIN</th>
                     <th>Sécurité</th>
                     <th>Date de négociation</th>
                     <th>Date de valeur</th>
                     <th>Sens</th>
                     <th>Devise</th>
-                    <th>Statut</th>
+                    <th>Statut </th>
                     <th>Quantité</th>
                     <th>Prix</th>
                     <th>Montant des frais</th>
                     <th>Montant brt</th>
                     <th>Montant net</th>
                     <th>Etat</th>
-
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor='let o of operation'>
+                <tr *ngFor='let o of ordres'>
                     <th scope="row">{{o.Code_isin_opt}}</th>
                     <td>{{o.security}}</td>
                     <td>{{o.tradingDate}}</td>
@@ -36,7 +37,11 @@
                     <td>{{o.mntbrt}}</td>
                     <td>{{o.MntNet}}</td>
                     <td>{{o.etat}}</td>
+                    <td>
 
+                        <button class="btn btn-primary" (click)="openModal(o.id)">Action</button>
+
+                    </td>
                 </tr>
 
             </tbody>

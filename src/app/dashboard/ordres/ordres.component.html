@@ -20,6 +20,7 @@
                     <th>Montant net</th>
                     <th>Etat</th>
                     <th>Action</th>
+                    <th>supprimé</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,6 +41,12 @@
                     <td>
 
                         <button class="btn btn-primary" (click)="openModal(o.id)">Action</button>
+
+                    </td>
+                    <td>
+
+                        <button class="btn btn-danger" (click)="delete(o.id)"><i
+                                class="icofont icofont-ui-delete"></i></button>
 
                     </td>
                 </tr>

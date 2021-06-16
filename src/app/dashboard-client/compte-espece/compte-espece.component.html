@@ -13,7 +13,41 @@
 
 </ul>
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date de position</th>
+                        <th>Date de fin</th>
+                        <th>Devise</th>
+                        <th> statut</th>
+                        <th>Somme </th>
+
+
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let p of Positionespece'>
+
+                        <td>{{p.positiondate}}</td>
+                        <td>{{p.enddate}}</td>
+                        <td>{{p.currency}}</td>
+                        <td>{{p.statuts}}</td>
+                        <td>{{p.amount}}</td>
+
+
+
+
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
         <app-card [title]="' '">
             <div class="card mb-3">
@@ -22,25 +56,27 @@
 
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">number</h6>
+                            <h6 class="mb-0">Numéro </h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
                             {{cashaccount?.number}}
                         </div>
                     </div>
                     <hr>
+
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">owner</h6>
+                            <h6 class="mb-0">Solde</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            {{cashaccount?.owner}}
+                            {{cashaccount?.solde}}
                         </div>
                     </div>
                     <hr>
+
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">currency</h6>
+                            <h6 class="mb-0">Devise</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
                             {{cashaccount?.currency}}
@@ -49,7 +85,7 @@
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">ugest</h6>
+                            <h6 class="mb-0">Ugest</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
                             {{cashaccount?.ugest}}
@@ -58,7 +94,7 @@
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">description</h6>
+                            <h6 class="mb-0">Description</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
                             {{cashaccount?.description}}
@@ -67,7 +103,7 @@
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">statuts</h6>
+                            <h6 class="mb-0">Statut</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
                             {{cashaccount?.statuts}}
@@ -76,7 +112,7 @@
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">metpay</h6>
+                            <h6 class="mb-0">Méthode de paiement </h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
                             {{cashaccount?.metpay}}
@@ -85,7 +121,7 @@
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">opendate</h6>
+                            <h6 class="mb-0">Date d’ouverture</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
                             {{cashaccount?.opendate}}
@@ -94,7 +130,7 @@
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">closuredate</h6>
+                            <h6 class="mb-0">Date de fermeture</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
                             {{cashaccount?.closuredate}}

@@ -63,7 +63,13 @@ const MENUITEMS = [
 		main: [
 			{
 				state: 'orders',
-				name: 'Ordres',
+				name: "Ordres d'achat",
+				type: 'link',
+				icon: 'ti-layers'
+			},
+			{
+				state: 'orders-de-Vente',
+				name: "Ordres de vente",
 				type: 'link',
 				icon: 'ti-layers'
 			},
@@ -98,11 +104,11 @@ const MENUITEMS = [
 		]
 	},
 	{
-		label: 'Ajouter  cours',
+		label: 'Ajouter  valeur',
 		main: [
 			{
 				state: 'ajouter-cours',
-				name: 'ajouter cours',
+				name: 'ajouter valeur',
 				type: 'link',
 				icon: 'ti-id-badge'
 			}
@@ -117,6 +123,6 @@ export class MenuItems {
 	}
 
 	/*add(menu: Menu) {
-    MENUITEMS.push(menu);
+	MENUITEMS.push(menu);
   }*/
 }

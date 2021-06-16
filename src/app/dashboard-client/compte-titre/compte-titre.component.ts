@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PositionTitreService } from 'src/app/service/position-titre.service';
 import { SecaccountService } from 'src/app/service/secaccount.service';
 
@@ -11,7 +12,7 @@ export class CompteTitreComponent implements OnInit {
 	Secaccount: any;
 	Positiontitre: any;
 	id: any;
-	constructor(private SecaccountService: SecaccountService, private positionTitreService: PositionTitreService) { }
+	constructor(private SecaccountService: SecaccountService, private positionTitreService: PositionTitreService, private router: Router) { }
 
 	ngOnInit() {
 		this.id = JSON.parse(localStorage.getItem('connectedUserDorra'));
@@ -24,5 +25,8 @@ export class CompteTitreComponent implements OnInit {
 
 			})
 		});
+	}
+	goToAddOrdre(id) {
+		this.router.navigate([`vendre-ordres/${id}`])
 	}
 }

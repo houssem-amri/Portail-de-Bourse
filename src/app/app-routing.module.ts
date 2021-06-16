@@ -40,6 +40,10 @@ const routes: Routes = [
 				loadChildren: () => import('./dashboard/ordres/ordres.module').then((m) => m.OrdresModule)
 			},
 			{
+				path: 'orders-de-Vente',
+				loadChildren: () => import('./dashboard/ordres-vente/ordres-vente.module').then((m) => m.OrdresVenteModule)
+			},
+			{
 				path: 'order-history',
 				loadChildren: () =>
 					import('./dashboard/order-history/order-history.module').then((m) => m.OrderHistoryModule)
@@ -118,6 +122,11 @@ const routes: Routes = [
 					import('./dashboard-client/ajouter-ordres/ajouter-ordres.module').then((m) => m.AjouterOrdresModule)
 			},
 			{
+				path: 'vendre-ordres/:id',
+				loadChildren: () =>
+					import('./dashboard-client/ajouter-ordres-vente/ajouter-ordres-vente.module').then((m) => m.AjouterOrdresVenteModule)
+			},
+			{
 				path: 'ordres-client',
 				loadChildren: () => import('./dashboard-client/ordres/ordres.module').then((m) => m.OrdresModule)
 			},
@@ -157,7 +166,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-	imports: [ RouterModule.forRoot(routes) ],
-	exports: [ RouterModule ]
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

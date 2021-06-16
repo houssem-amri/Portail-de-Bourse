@@ -1,1 +1,45 @@
-<p>client-charts works!</p>
+<div class="row">
+    <div class="col-md-6 col-xl-6">
+        <app-card [cardClass]="'counter-card-1'" [blockClass]="'card-body-big'">
+            <div class="row">
+                <div class="col-6 counter-card-icon">
+                    <i class="icofont icofont-chart-histogram"></i>
+                </div>
+                <div class="col-6  text-right">
+                    <div class="counter-card-text">
+                        <h3>{{dataSerie1?.length}}</h3>
+                        <p>NOMBRE D'OPERATION ACHETER</p>
+                    </div>
+                </div>
+            </div>
+        </app-card>
+    </div>
+    <!-- counter-card-1 end-->
+
+    <!-- counter-card-2 start -->
+    <div class="col-md-6 col-xl-6">
+        <app-card [cardClass]="'counter-card-2'" [blockClass]="'card-body-big'">
+            <div class="row">
+                <div class="col-6 counter-card-icon">
+                    <i class="icofont icofont-chart-line-alt"></i>
+                </div>
+                <div class="col-6 text-right">
+                    <div class="counter-card-text">
+                        <h3>{{dataSerie2?.length}}</h3>
+                        <p>NOMBRE D'OPERATION VENDUS</p>
+                    </div>
+                </div>
+            </div>
+        </app-card>
+    </div>
+    <!-- counter-card-2 end -->
+
+
+
+    <div class="col-md-12">
+        <app-card [title]="'Area chart'">
+            <app-apex-chart chartID="area-chart-1-cac" [chartConfig]="this.chartDB.area1CAC"></app-apex-chart>
+        </app-card>
+    </div>
+
+</div>

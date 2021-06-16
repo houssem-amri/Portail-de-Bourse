@@ -2,35 +2,36 @@
 <app-card [title]="'ajouter ordres'">
     <h4 class="sub-title">information order </h4>
 
-    <form #addOrderForm='ngForm' (ngSubmit)="addOrder()">
+    <form #addOrderVenteForm='ngForm' (ngSubmit)="addOrderVente()">
 
-
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Code ISIN :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="  {{Operation?.Code_isin_opt}}" disabled>
+            </div>
+        </div>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Sécurité :</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="  Sécurité" [(ngModel)]='order.security'
-                    [ngModelOptions]="{standalone:true}">
+                <input type="text" class="form-control" placeholder="  {{Operation?.security}}" disabled>
             </div>
         </div>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Date de négociation :</label>
             <div class="col-sm-10">
-                <input type="date" class="form-control" placeholder="  Date de négociation"
-                    [(ngModel)]='order.tradingDate' [ngModelOptions]="{standalone:true}">
+                <input type="text" class="form-control" placeholder="  {{Operation?.tradingDate}}" disabled>
             </div>
         </div>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Date de valeur :</label>
             <div class="col-sm-10">
-                <input type="date" class="form-control" placeholder="  Date de valeur" [(ngModel)]='order.valueDate'
-                    [ngModelOptions]="{standalone:true}">
+                <input type="text" class="form-control" placeholder="  {{Operation?.valueDate}}" disabled>
             </div>
         </div>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">sens :</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="  sens" [(ngModel)]='order.sens'
-                    [ngModelOptions]="{standalone:true}">
+                <input type="text" class="form-control" placeholder="  {{Operation?.sens}}" disabled>
             </div>
         </div>
 
@@ -38,22 +39,19 @@
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Devise :</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder=" Devise" [(ngModel)]='order.currency'
-                    [ngModelOptions]="{standalone:true}">
+                <input type="text" class="form-control" placeholder=" {{Operation?.currency}}" disabled>
             </div>
         </div>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">statut :</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="  statut" [(ngModel)]='order.status'
-                    [ngModelOptions]="{standalone:true}">
+                <input type="text" class="form-control" placeholder="  {{Operation?.status}}" disabled>
             </div>
         </div>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Quantité :</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="  Quantité" [(ngModel)]='order.quanti'
-                    [ngModelOptions]="{standalone:true}">
+                <input type="text" class="form-control" placeholder="  {{Operation?.quanti}}" disabled>
             </div>
         </div>
 
@@ -63,7 +61,7 @@
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Prix :</label>
             <div class="col-sm-10">
-                <input type="number" class="form-control" placeholder="  Prix" [(ngModel)]='order.price'
+                <input type="number" class="form-control" placeholder="  Prix" [(ngModel)]='ordre.price'
                     [ngModelOptions]="{standalone:true}">
             </div>
         </div>
@@ -71,7 +69,7 @@
             <label class="col-sm-2 col-form-label">Montant des frais :</label>
             <div class="col-sm-10">
                 <input type="number" class="form-control" placeholder="  Montant des frais"
-                    [(ngModel)]='order.feeamount' [ngModelOptions]="{standalone:true}">
+                    [(ngModel)]='ordre.feeamount' [ngModelOptions]="{standalone:true}">
             </div>
         </div>
         <!-- <div class="form-group row">
@@ -89,21 +87,12 @@
                     [ngModelOptions]="{standalone:true}">
             </div>
         </div> -->
-        <!-- <div class="form-group row">
-            <label class="col-sm-2 col-form-label"> Etat :</label>
-            <div class="col-sm-10">
 
-                <select [(ngModel)]='order.etat' [ngModelOptions]="{standalone:true}" class="form-control">
-                    <option value="achat">achat</option>
-                    <option value="vente">vente</option>
-                </select>
-            </div>
-        </div> -->
 
         <div class="form-group row">
 
             <div class="col-sm-4">
-                <button type="submit" class="btn btn-info"> ajouter ordre </button>
+                <button type="submit" class="btn btn-info"> ajouter ordre de Vente </button>
             </div>
         </div>
 
